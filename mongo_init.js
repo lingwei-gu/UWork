@@ -1,6 +1,6 @@
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb+srv://3221385021:ggg666777888@job-posts-6mmei.gcp.mongodb.net/job_system";
+var url = "mongodb+srv://3221385021:ggg666777888@cluster0-6mmei.mongodb.net/test?retryWrites=true&w=majority";
 
 class Post_db {
     constructor() {
