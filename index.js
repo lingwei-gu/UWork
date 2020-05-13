@@ -28,6 +28,8 @@ cron.schedule("0 15 * * *", function() {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 app.use('/express_backend_sort', (req,res) => {
     var db_operation = new Job_db();
     if (req.method == 'POST') {
