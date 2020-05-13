@@ -86,11 +86,11 @@ class Concurrent_scrape:
 def scrape():
     website = Concurrent_scrape()
     website.connect_to_base()
-    #website.get_source() 
+    website.get_source() 
 
 
 
-    website.get_applied() # CHANGE IT !!!!!!!!!!!!!!!!!!!!!!!!!
+    #website.get_applied() # CHANGE IT !!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
@@ -110,11 +110,11 @@ def scrape():
         website = Concurrent_scrape()
         website.connect_to_base()
 
-        #website.get_source()
+        website.get_source()
         
 
 
-        website.get_applied() # CHANGE IT !!!!!!!!!!!!!!!!!!!!!!!!!
+        #website.get_applied() # CHANGE IT !!!!!!!!!!!!!!!!!!!!!!!!!
         
 
         browser = website.browser

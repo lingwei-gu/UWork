@@ -7,6 +7,7 @@
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.19.0",
     "child_process": "^1.0.2",
+    "concurrently": "^5.2.0",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
     "expres": "^0.0.5",
@@ -28,8 +29,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",   
+    "server": "nodemon server.js",    
+    "client": "npm start --prefix client",   
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client        && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
@@ -37,7 +42,7 @@
   },
   "author": "",
   "license": "ISC",
-  "engines" : {
+  "engines": {
     "node": "12.16.1"
   },
   "bugs": {

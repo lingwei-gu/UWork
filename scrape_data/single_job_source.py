@@ -132,7 +132,7 @@ def get_job_post_info(browser, lock):
     if temp is None:
         temp_time = dict_to_return["app"]["Application Deadline"].split()
         seconds_left = count_time(temp_time)
-        if seconds_left < 0: #change it to >
+        if seconds_left > 0: #change it to >
             mycol.create_index([("time", pymongo.ASCENDING)], expireAfterSeconds=0)
             dict_to_return.update({"time": seconds_left})
             inserted = mycol.insert_one(dict_to_return)

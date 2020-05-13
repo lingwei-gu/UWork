@@ -3,6 +3,7 @@
 const express = require('express');
 const spawn = require('child_process').spawn;
 const cron = require("node-cron");
+const path = require('path');
 const app = express();
 let port = process.env.PORT;
 if (port == null || port == "") {
@@ -28,7 +29,18 @@ cron.schedule("0 15 * * *", function() {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 app.use(express.static(path.join(__dirname, 'client/build')));
+// if(process.env.NODE_ENV === 'production') {  
+//     app.use(express.static(path.join(__dirname, 'client/build')));  
+//     app.get('*', (req, res) => {    
+//         res.sendFile(path.join(__dirname = 'client/build/index.html'));  
+//     });
+// }
+
+app.get('/', (req, res) => {    
+    res.sendFile(path.join(__dirname = 'client/build/index.html'));  
+});
 
 app.use('/express_backend_sort', (req,res) => {
     var db_operation = new Job_db();
