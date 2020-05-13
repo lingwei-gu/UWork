@@ -33,10 +33,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'client/build')));
 if(process.env.NODE_ENV === 'production') {  
     app.use(express.static(path.join(__dirname, 'client/build')));  
-    app.get('*', (req, res) => {
+    app.get('/', (req, res) => {
         res.sendFile(path.join(__dirname = 'client/build/index.html'));  
     });
+    app.get('/job-search', (req, res) => {    
+        res.sendFile('client/build/index.html', { root: __dirname });
+    });
 }
+
+app.get('/', (req, res) => {    
+    res.sendFile(path.join(__dirname = 'client/build/index.html'));  
+});
 
 app.get('/job-search', (req, res) => {    
     res.sendFile('client/build/index.html', { root: __dirname });
