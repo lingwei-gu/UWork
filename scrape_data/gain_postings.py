@@ -68,16 +68,16 @@ class Concurrent_scrape:
         self.browser.find_element_by_partial_link_text("Search Job Postings").click()
         return self.browser
     
-    def get_applied(self):
-        pair = ''
-        while (pair == ''):
-            sleep(0.001)
-            try:
-                pair = self.browser.find_element_by_xpath("//*[@id='quickSearchCountsContainer']/table/tbody/tr[4]/td[2]/a")
-            except:
-                continue
-        self.browser.find_element_by_xpath("//*[@id='quickSearchCountsContainer']/table/tbody/tr[4]/td[2]/a").click()
-        return self.browser
+    # def get_applied(self):
+    #     pair = ''
+    #     while (pair == ''):
+    #         sleep(0.001)
+    #         try:
+    #             pair = self.browser.find_element_by_xpath("//*[@id='quickSearchCountsContainer']/table/tbody/tr[4]/td[2]/a")
+    #         except:
+    #             continue
+    #     self.browser.find_element_by_xpath("//*[@id='quickSearchCountsContainer']/table/tbody/tr[4]/td[2]/a").click()
+    #     return self.browser
 
 
 # self.browser is of type WebDriver
@@ -168,7 +168,7 @@ def scrape():
                     #counter += times_to_flip
                     #for i in range(times_to_flip):
                     temp = browser.page_source
-                    element = browser.find_element_by_xpath("//*[@id='postingsTablePlaceholder']/div[1]/div/ul/li[16]/a")
+                    element = browser.find_element_by_xpath("//*[@id='postingsTablePlaceholder']/div[1]/div/ul/li[last()-1]/a")
                     browser.execute_script("arguments[0].click();", element)
                     while (temp == browser.page_source):
                         sleep(0.2)

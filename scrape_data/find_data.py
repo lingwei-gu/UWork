@@ -45,11 +45,11 @@ for i in range(10):
 #     if i['work_term_ratings']: #and 'by_work_term' in i['work_term_ratings']:
 #         print(i['work_term_ratings']['by_work_term'])
 print("Activated")
-print(mycol.find_one())
+#print(mycol.find_one())
 #print(mycol.find())
 #mycol.insert_one({"name": "test"})
 
 # for i in mycol.find():
 #     print(i)
 
-#print("count", mycol.count_documents({}))
+print("count", mycol.count_documents({}))

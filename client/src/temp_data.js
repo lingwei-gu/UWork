@@ -9,14 +9,14 @@ class Temp_data extends Component {
         this.query_properties = [{'properties': {'sort': 'true'}}, {'properties': {'sort': 'false'}}]
         this.current_condition = {};
         this.temp_data_ignore = {
-            'posting_id': '156914',
-            'company_name': 'Bell Media - Head Office',
+            'posting_id': '',
+            'company_name': '',
             'overview': {
                 'Work Term': '2020 - Spring',
-                'Job_Title': 'Technical Account Coordinator', 
+                'Job_Title': '', 
                 'Level': 'Junior\n\n\nIntermediate', 
-                'Job - City': 'Toronto', 
-                'Job - Province / State': 'Ontario', 
+                'Job - City': '', 
+                'Job - Province / State': '', 
                 'Job - Country': 'Canada', 
                 'Work Term Duration': '8 month consecutive work term required', 
                 'Required Skills': 'Requirements:\n\nA keen interest in digital advertising (e.g. IAB) -\xa0preferred\nKnowledge of digital ad servers (DFP) and third party vendors -\xa0preferred\nUnderstanding of digital advertising tech (e.g. VAST, Javascript/HTML5 tags) -\xa0preferred\nMS Office, PowerPoint and Excel applications'

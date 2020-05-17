@@ -463,11 +463,9 @@ function Job(props) {
     <h1 style={{fontFamily: "monospace"}}>Search Result</h1>
 
     <div className="job-count">
-      <p>Matched job openings: </p>
-      <p>Total job openings: </p>
     </div>
 
-    <div style={{width:"50rem", margin:"auto", marginBottom:"4%"}}>
+    <div style={{width:"50rem", margin:"auto", marginBottom:"5%"}}>
       <button onClick={handleExpand} className="expand-btn btn">{expand ? 'Exapnd All ▾' : 'Collapse All ▴'}</button>
     </div>
     

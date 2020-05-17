@@ -7,24 +7,24 @@ const path = require('path');
 const app = express();
 let port = process.env.PORT;
 if (port == null || port == "") {
-    port = 5000;
+    port = 8080;
 }
 const Job_db = require('./mongo_init');
 var bodyParser = require('body-parser');
 
-cron.schedule("0 17 * * *", function() {
-    console.log("Scraper Activated 5pm");
-    spawn('python3', ['scrape_data/gain_postings.py']);
-});
+// cron.schedule("0 21 * * *", function() {
+//     console.log("Scraper Activated 5pm");
+//     spawn('python3', ['scrape_data/gain_postings.py']);
+// });
 
-cron.schedule("0 13 * * *", function() {
-    console.log("Scraper Activated 1pm");
-    spawn('python3', ['scrape_data/gain_postings.py']);
-});
-cron.schedule("0 15 * * *", function() {
-    console.log("Scraper Activated 3pm");
-    spawn('python3', ['scrape_data/gain_postings.py']);
-});
+// cron.schedule("0 16 * * *", function() {
+//     console.log("Scraper Activated 1pm");
+//     spawn('python3', ['scrape_data/gain_postings.py']);
+// });
+// cron.schedule("0 19 * * *", function() {
+//     console.log("Scraper Activated 3pm");
+//     spawn('python3', ['scrape_data/gain_postings.py']);
+// });
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -39,6 +39,9 @@ if(process.env.NODE_ENV === 'production') {
     app.get('/job-search', (req, res) => {    
         res.sendFile('client/build/index.html', { root: __dirname });
     });
+    app.get('/about', (req, res) => {    
+        res.sendFile('client/build/index.html', { root: __dirname });
+    });
 }
 
 app.get('/', (req, res) => {    
@@ -46,6 +49,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/job-search', (req, res) => {    
+    res.sendFile('client/build/index.html', { root: __dirname });
+});
+
+app.get('/about', (req, res) => {    
     res.sendFile('client/build/index.html', { root: __dirname });
 });
 
