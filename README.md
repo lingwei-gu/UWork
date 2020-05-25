@@ -1,6 +1,6 @@
 UWork
 
-Tech Stacks: JavaScript, Node.js, Express, React, Redux, MongoDB, Python, Selenium, Beautiful Soup
+Tech Stacks: JavaScript, Node.js, Express, React, MongoDB, Python, Selenium, Beautiful Soup
 
 • A web application that sorts job postings on WaterlooWorks by the percentage of students from different work terms that 
   companies hire, using Node.js and Express
