@@ -1,4 +1,4 @@
-UWork
+UWork (domain name: uwork.best)
 
 Tech Stacks: JavaScript, Node.js, Express, React, MongoDB, Python, Selenium, Beautiful Soup
 
@@ -10,4 +10,6 @@ Tech Stacks: JavaScript, Node.js, Express, React, MongoDB, Python, Selenium, Bea
 • Implemented data storage and queries by MongoDB 
 
 • Front-end: React, CSS/Bootstrap
+
+• Express Server is deployed on Google App Engine
 
