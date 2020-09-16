@@ -1,4 +1,4 @@
-# UWork (domain name: uwork.best)
+# UWork 
 
 Tech Stacks: JavaScript, Node.js, Express, React, MongoDB, Python, Selenium, Beautiful Soup
 
