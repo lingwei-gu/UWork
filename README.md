@@ -1,4 +1,4 @@
-UWork (domain name: uwork.best)
+# UWork (domain name: uwork.best)
 
 Tech Stacks: JavaScript, Node.js, Express, React, MongoDB, Python, Selenium, Beautiful Soup
 
@@ -13,4 +13,6 @@ Tech Stacks: JavaScript, Node.js, Express, React, MongoDB, Python, Selenium, Bea
 
 • Express Server is deployed on Google App Engine
 
-<img src="images/postings.png">
+# Examples:
+<img src="Images/catogorize.png">
+<img src="Images/postings.png">
