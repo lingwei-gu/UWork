@@ -13,4 +13,4 @@ Tech Stacks: JavaScript, Node.js, Express, React, MongoDB, Python, Selenium, Bea
 
 • Express Server is deployed on Google App Engine
 
-![](images/postings.png)
+<img src="images/postings.png">
